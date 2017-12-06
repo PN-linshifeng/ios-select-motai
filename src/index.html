@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>select模态窗口</title>
+    <link rel="stylesheet" type="text/css" href="base/css/app.css">
+    <script src="base/js/SelectModai.js"></script>
+    <script src="base/js/modai.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            new SelectModai('select', 640);
+            document.querySelector(".select1").addEventListener("blur",function(){
+                console.log(this.value);
+            },false)
+        }, false);
+
+    </script>
+</head>
+
+<body>
+    <form class="wrap-page step">
+        <p>
+            <select class="select select1" event="blur" style="color: #000" name="acsc">
+                <option value="">请选择你喜爱的男演员</option>
+                <option value="周星驰" selected >周星驰</option>
+                <option value="成龙">成龙</option>
+                <option value="黄渤">黄渤</option>
+            </select>
+        </p>
+
+        <p>
+            <select class="select" disabled name="acc">
+                <option value="">这个下拉框禁用 </option>
+                <option value="1-F00"></option>
+                <option value="2-F00">固定迷你账户-250美元或以上开户</option>
+            </select>
+        </p>
+        <p>
+            <select class="select select2" event="change" style="color: #000" name="fsfs">
+                <option value="">请选择你喜爱的女演员</option>
+                <option value="刘涛">刘涛</option>
+                <option value="刘诗诗">刘诗诗</option>
+                <option value="杨紫">杨紫</option>
+            </select>
+        </p>
+       
+    </form>
+</body>
+
+</html>
