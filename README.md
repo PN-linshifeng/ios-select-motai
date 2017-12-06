@@ -6,6 +6,9 @@ HTML
 event：监听派发事件blur click change
 name：必写
 
+CSS
+引用app.css
+
 JS
 引用modai.js 和 SelectModai.js，modai.js是模态窗口插件，SelectModai.js是重写select插件
 
