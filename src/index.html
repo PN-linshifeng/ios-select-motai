@@ -9,16 +9,11 @@
     <link rel="stylesheet" type="text/css" href="base/css/app.css">
     <script src="base/js/SelectModai.js"></script>
     <script src="base/js/modai.js"></script>
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function() {
-            new SelectModai('.select', 640);
-            document.querySelector(".select1").addEventListener("blur",function(){
-                console.log(this.value);
-            },false)
-        }, false);
-
-    </script>
+    <style>
+    select{
+        width: 100%;
+    }
+    </style>
 </head>
 
 <body>
@@ -41,22 +36,40 @@
         </p>
         <p>
             <select class="select select2" event="change" style="color: #000" name="fsfs">
-                <option value="">请选择你喜爱的女演员</option>
-                <option value="刘涛">刘涛刘涛刘涛刘涛刘涛刘涛刘涛刘涛刘涛刘涛刘涛刘涛</option>
+                <option value="">iPhone5 最大字数12</option>
+                <option value="刘涛">刘涛刘涛刘涛刘涛刘涛刘涛12</option>
+                <option value="刘诗诗">刘诗诗</option>
+                <option value="杨紫">杨紫</option>
+            </select>
+        </p>
+         <p>
+            <select class="select select3" event="change" style="color: #000" name="fsfss">
+                <option value="">iPhone6 最大字数15</option>
+                <option value="刘涛">刘涛刘涛刘涛刘涛刘涛刘涛刘涛15</option>
                 <option value="刘诗诗">刘诗诗</option>
                 <option value="杨紫">杨紫</option>
                 <option value="刘涛">刘涛</option>
-                <option value="刘诗诗">刘诗诗</option>
-                <option value="杨紫">杨紫</option>
-                <option value="刘涛">刘涛</option>
-                <option value="刘诗诗">刘诗诗</option>
-                <option value="杨紫">杨紫</option>
-                <option value="刘涛">刘涛</option>
-                <option value="刘诗诗">刘诗诗</option>
-                <option value="杨紫">杨紫</option>
-                <option value="刘涛">刘涛</option>
-                <option value="刘诗诗">刘诗诗</option>
-                <option value="杨紫">杨紫</option>
+
+            </select>
+        </p>
+        <p>
+            <select class="select select3" event="change" style="color: #000" name="jf">
+                <option value="">iPhone6 Plus 最大字数15</option>
+                <option value="刘涛">刘涛刘涛刘涛刘涛刘涛刘涛刘涛刘涛刘18</option>
+                <option value="刘g诗诗">刘诗诗</option>
+                <option value="杨f紫">杨紫</option>
+                <option value="刘s涛">刘涛</option>
+                <option value="刘ss诗诗">刘诗诗</option>
+                <option value="杨s紫">杨紫</option>
+                <option value="刘涛59">刘涛</option>
+                <option value="刘诗56诗">刘诗诗</option>
+                <option value="杨紫656">杨紫</option>
+                <option value="刘涛65">刘涛</option>
+                <option value="刘55诗诗">刘诗诗</option>
+                <option value="杨紫s">杨紫</option>
+                <option value="刘涛s">刘涛</option>
+                <option value="刘诗s诗">刘诗诗</option>
+                <option value="杨紫0">杨紫</option>
             </select>
         </p>
         <p>----------</p>
@@ -71,7 +84,7 @@
        
     </form>
 
-    <p><a href="#tip">使用</a></p>
+    <p><a href="#tip">使用方法</a></p>
     <div class="page-view" id="tip">
         <span class="close"></span>
         <div class="page-warp" style="font-size: 11px;">
@@ -88,7 +101,7 @@ JS<br>
 引用modai.js 和 SelectModai.js，modai.js是模态窗口插件，SelectModai.js是重写select插件<br><br>
 
 document.addEventListener("DOMContentLoaded", function() {<br>
-    new SelectModai('select', 640);//select 是重写select 的选择器，640是max-width：640，窗口必须小于max-width<br>
+    new SelectModai('select');//select 是重写select 的选择器，640是max-width：640，窗口必须小于max-width<br>
 <br>
     //事件<br>
     document.querySelector(".select1").addEventListener("blur",function(){<br>

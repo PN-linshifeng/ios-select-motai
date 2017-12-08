@@ -3,28 +3,26 @@
     /*
      @method SelectModai
      @param node 重构的select class节点
-     @param screenWidth 窗口宽度小于screenWidth，开启modai
      */
-    var SelectModai = function(node, screenWidth) {
+    var SelectModai = function(node) {
         this.node = node;
         this.selectAll = document.querySelectorAll(node) || document.getElementsByName(node);
         this.screenWidth = screen.width;
         this.selectList = []; //被转化的select
         this.iPhoneList = {
             iPhone5: 12,
-            iPhone6: 15,
-            iPhone6P: 17,
+            iPhone6: 14,
+            iPhone6P: 16,
         }
         this.init(); //初始化插件
     };
     SelectModai.prototype = {
         init: function() {
-            //如果网页宽度大于定义宽度，则不用插件
+            //必须是iPhone
             var isIOS = /iPhone/g.test(navigator.appVersion);
             if (!isIOS) {
                 return;
             }
-
             //获取有效的select
             this.selectAll.forEach(function(item, index) {
                 if (item.disabled) {
@@ -33,8 +31,7 @@
                 var options = item.options;
                 for (var i = 0; i < options.length; i++) {
                     var len = options[i].text.length;
-                    console.log(len)
-                    if (len > 12 && this.screenWidth <= 320 || len > 15 && this.screenWidth <= 375 || len > 17 && this.screenWidth <= 414) {
+                    if (len > 12 && this.screenWidth <= 320 || len > 15 && this.screenWidth <= 375 || len > 18 && this.screenWidth <= 414) {
                         this.createDiv(item, index); //创建点击div 并替换select
                         this.createModai(item, index); //创建模态窗口
                         break;
@@ -54,7 +51,7 @@
                 var options = item.options;
                 for (var i = 0; i < options.length; i++) {
                     var len = options[i].text.length;
-                    if (len > 12 && this.screenWidth <= 320 || len > 15 && this.screenWidth <= 375 || len > 17 && this.screenWidth <= 414) {
+                    if (len > 12 && this.screenWidth <= 320 || len > 15 && this.screenWidth <= 375 || len > 18 && this.screenWidth <= 414) {
                         this.selectList.push(item)
                         break;
                     }
@@ -127,6 +124,8 @@
             }
         }
     };
-    window.SelectModai = SelectModai;
-
+    win.SelectModai = SelectModai;
 })(window, document);
+document.addEventListener("DOMContentLoaded", function() {
+    new SelectModai('select');
+}, false);
