@@ -3,6 +3,7 @@
     /*
      @method SelectModai
      @param node 重构的select class节点
+     @pn 245810159@qq.com
      */
     var SelectModai = function(node) {
         this.node = node;
